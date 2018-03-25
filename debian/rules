@@ -1,1 +1,25 @@
 #!/usr/bin/make -f
+
+export DH_OPTIONS
+
+# Looks like dh_golang doesn't set diffrent archs, so you have to do them semi-manually.
+ifeq ($(DEB_HOST_ARCH), i386)
+	export GOARCH := 386
+else ifeq ($(DEB_HOST_ARCH), amd64)
+	export GOARCH := amd64
+else ifeq ($(DEB_HOST_ARCH), armhf)
+	export GOARCH := arm
+  # May need to set GOARM as well if your going to target ARM. But for now this works.
+else ifeq ($(DEB_HOST_ARCH), arm64)
+	export GOARCH := arm64
+endif
+
+# Or add your arch that your targeting, these are just examples.
+
+# Directory where compiled binary is placed + debian setup files. 
+# Note: If your doing building thru git, you may want to add obj-* to .gitignore
+BUILD_DIR := obj-$(DEB_HOST_GNU_TYPE)
+
+# Required, put the url (without http://) of your git repo.
+export DH_GOPKG := github.com/junland/hello-deb
+
