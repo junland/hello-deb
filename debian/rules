@@ -68,8 +68,10 @@ override_dh_golang:
 	##
 
 override_dh_auto_install:
+	# This is making a "fakeroot" so that when the deb is installed the binary will be placed in /usr/bin.
 	mkdir -p debian/$(GIT_REPO_NAME)/usr/bin
-	cp $(BUILD_DIR)/bin/git-lfs debian/$(GIT_REPO_NAME)/usr/bin/
+	# This is copying the binary and placing it in the fake root path.
+	cp $(BUILD_DIR)/bin/hello-deb debian/$(GIT_REPO_NAME)/usr/bin/
 
 override_dh_auto_test:
 	# This disables testing of Go code. e.g. go test.
