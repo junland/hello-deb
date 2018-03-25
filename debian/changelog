@@ -1,0 +1,5 @@
+hello-deb (1.0.0) stable; urgency=low
+
+  * New upstream version
+
+-- John Unland <junland@github.com> Sun, 25 Mar 2018 14:29:00 +0000
