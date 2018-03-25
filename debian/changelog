@@ -1,5 +1,5 @@
-hello-deb (1.0.0) stable; urgency=low
+hello-deb (1.0.0) unstable; urgency=medium
 
-  * New upstream version
+  * New upstream release)
 
--- John Unland <junland@github.fake.com> Fri, 28 Apr 2017 14:29:00 +0000
+ -- John Unland <junland@github.fake.com>  Tue, 30 Jan 2018 09:00:08 +0100
