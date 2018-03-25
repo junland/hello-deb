@@ -2,7 +2,7 @@ package main
 
 import (
     "fmt"
-    "github.com/junland/hello-import"
+    "github.com/junland/hellofunc"
 )
 
 func main() {
