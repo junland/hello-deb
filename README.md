@@ -30,9 +30,48 @@ For more information please visit this [section](https://www.debian.org/doc/manu
 For this repo, I also have `compat` which just tell's the build tool to use a certain version for building packages. (Just helps with avoiding some warnings on the output.
 
 ## Getting started
-_I am using a Vagrant VM (Ubuntu 17.10) to do this work, I highly advise you do the same (Just not your main workstation's OS.)
+_I am using a Vagrant VM (Ubuntu 17.10) to do this work, I highly advise you do the same (Just not your main workstation's OS.)_
 
+1. Install Go language + some packages for dev work. (1.8.x from the official Ubuntu repos)
 
+```
+$> sudo apt install golang-go git
+```
+
+2. Install native dependencies.
+
+```
+$> sudo apt install dh-make devscripts dh-make-golang dh-golang build-essential fakeroot
+```
+
+3. Clone repo.
+
+```
+$> git clone https://github.com/junland/hello-deb.git
+```
+
+4. Review `debian/rules`
+```
+$> vi hello-deb/debian/rules
+```
+
+5. Add `armhf` in `dpkg`
+
+__Note__: This is pretty important as it makes 
+
+```
+$> sudo dpkg --add-architecture armhf
+```
+
+6. Build the packages. (Run `dpkg-buildpackage` using `sudo`)
+
+```
+$> cd hello-deb && sudo dpkg-buildpackage -us -uc -b --host-arch armhf -d
+```
+
+7. Pray it builds.
+
+8. If you don't see any `error` messages then that means the `.deb` was made, you should see the package outside of the `hello-deb` directory with a couple of files. One of which being `hell-deb_1.0.0_armhf.deb`
 
 
 ## Caveats
