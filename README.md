@@ -21,13 +21,13 @@ To package your application, your repo must have a `debian` directory in it or d
 
 `copyright` - Plain text, used to place source code license info.
 
-`changelog` - Plain text (However needs special format described in [here](https://www.debian.org/doc/debian-policy/#document-ch-source)), used to describe the changes made to your code.
+`changelog` - Plain text (However needs special format described in [here](https://www.debian.org/doc/debian-policy/#document-ch-source), I would highly read this since the `changelog` file is very sensitive and if you do it wrong you will get lots of warnings in your build.), used to describe the changes made to your code.
 
 `rules` - Makefile, used to build the package.
 
 For more information please visit this [section](https://www.debian.org/doc/manuals/maint-guide/dreq.en.html#copyright) in the Debian maintaniers guide.
 
-For this repo, I also have `compat` which just tell's the build tool to use a certain version for building packages. (Just helps with avoiding some warnings on the output.
+For this repo, I also have `compat` which just tell's the build tool to use a certain version for building packages. (Just helps with avoiding some warnings on the output.)
 
 ## Getting started
 _I am using a Vagrant VM (Ubuntu 17.10) to do this work, I highly advise you do the same (Just not your main workstation's OS.)_
