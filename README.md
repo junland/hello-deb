@@ -72,7 +72,7 @@ For example, if I wanted to build for `i386`, I would issue this command inside 
 $> sudo dpkg-buildpackage -a i386 -us -uc -b 
 ```
 
-That's pretty much it, with that knowledge you can now build your `.deb` packages for various architectures. 
+That's pretty much it, with that knowledge you can now build your `.deb` packages and for various architectures. 
  
 ## Caveats
 
