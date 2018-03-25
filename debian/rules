@@ -26,6 +26,8 @@ export DH_GOPKG := github.com/junland/hello-deb
 # Required: Put the name of your git repo below. 
 GIT_REPO_NAME := hello-deb
 
+export PATH := $(CURDIR)/$(BUILD_DIR)/bin:$(PATH)
+
 ##
 # From git-lfs/git-lfs repo:
 # by-default, dh_golang only copies *.go and other source - this upsets a bunch of vendor test routines
