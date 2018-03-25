@@ -44,7 +44,7 @@ $> sudo apt install golang-go git
 $> sudo apt install dh-make devscripts dh-make-golang dh-golang build-essential fakeroot
 ```
 
-3. Clone repo.
+3. Clone the repo.
 
 ```
 $> git clone https://github.com/junland/hello-deb.git
