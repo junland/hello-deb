@@ -38,7 +38,7 @@ _I am using a Vagrant VM (Ubuntu 17.10), I highly advise you do the same (Just n
 $> sudo apt install golang-go git
 ```
 
-2. Install native dependencies.
+2. Install Debian build dependencies.
 
 ```
 $> sudo apt install dh-make devscripts dh-make-golang dh-golang build-essential fakeroot
