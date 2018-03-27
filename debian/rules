@@ -77,11 +77,3 @@ override_dh_auto_install:
 	mkdir -p debian/$(GIT_REPO_NAME)/usr/bin
 	# This is copying the binary and placing it in the fake root path.
 	cp $(BUILD_DIR)/bin/hello-deb debian/$(GIT_REPO_NAME)/usr/bin/
-
-override_dh_auto_test:
-	# This disables testing of Go code. e.g. go test.
-	# It kinda works, I just disabled this for simplicity sake.
-
-
-
-
